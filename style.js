@@ -27,10 +27,19 @@ $(".list li a").click(function()
 })
 
 $("#hireme").click(function() {
+    $(".list li a").removeClass("active");
+    $("#about").addClass("active");
     gotoclick("abt");
 });
 
-function gotoclick(choice)
-{
-    document.getElementById(choice).scrollIntoView({behavior: "smooth"});
+function gotoclick(choice) {
+    
+    $(".main-section").removeClass("active");
+    
+    $("#" + choice).addClass("active");
 }
+
+$(document).ready(function() {
+    $(".main-section").removeClass("active");
+    $("#hme").addClass("active");
+});
