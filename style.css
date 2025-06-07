@@ -98,6 +98,11 @@ ul
     color: aliceblue;
     
 }
+.list a:hover
+{
+    color: red;
+}
+
 
 .list .active
 {
@@ -165,6 +170,21 @@ ul
 {
     min-height: 100vh;
 }
+.main-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    transform: translateX(100%);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    background: inherit; 
+}
+
+.main-section.active {
+    transform: translateX(0);
+}
+
 .homeinfo {
     text-align: left;
     color: white;
@@ -243,7 +263,7 @@ ul
 {
     background-color: #ff4d4d; 
     color: black;           
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .section-title h2 {
@@ -313,8 +333,8 @@ ul
 #abt .section-title h2::after {
     content: '';
     position: absolute;
-    left: 100px;
-    bottom: -110px;
+    left: 92px;
+    top: 80px;
     width: 50px;     
     height: 2.5px; 
     background-color: red;
@@ -324,8 +344,8 @@ ul
 #abt .section-title h2::before {
     content: '';
     position: absolute;
-    left: 100px;
-    bottom: -116px;
+    left: 92px;
+    top: 85px;
     width: 30px;     
     height: 2.2px; 
     background-color: red;
